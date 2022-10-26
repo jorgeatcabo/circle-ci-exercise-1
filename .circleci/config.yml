@@ -38,5 +38,6 @@ workflows:
   say-hello-workflow:
     jobs:
       - print_world:
+          type: approval
           requires:
             - print_hello
