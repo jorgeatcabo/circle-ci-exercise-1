@@ -21,7 +21,6 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
       - run:
           name: "print hello"
           command: "echo hello"
@@ -29,7 +28,6 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - checkout
       - run:
           name: "print world"
           command: "echo world"
