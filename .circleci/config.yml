@@ -35,9 +35,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      - run:
-          name: "print my name"
-          command: echo ${NAME}
+      - run:  echo ${NAME}
      
 
 # Invoke jobs via workflows
