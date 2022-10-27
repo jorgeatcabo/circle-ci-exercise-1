@@ -47,7 +47,7 @@ jobs:
           name: "print hello world to txt file"
           command: echo "hello world" > output.txt
       - persist_to_workspace:
-          root: /tmp/workspace
+          root: workspace
           paths:
             - target/output.txt
             - build/*
@@ -56,7 +56,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: workspace
       - run:
           name: "print my name"
           command: cat output.txt
